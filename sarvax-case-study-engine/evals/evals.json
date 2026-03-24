@@ -1,0 +1,74 @@
+{
+  "skill_name": "sarvax-case-study-engine",
+  "oneChat_config": {
+    "endpoint": "http://localhost:8000",
+    "test_user": "eval_user",
+    "environment": "staging"
+  },
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write a case study for a Nairobi-based logistics company that used the SARVAX HR Agent. They had a 3-person HR team managing 20+ open roles and it was taking 45 days on average to fill a position.",
+      "expected_output": "Full case study with headline, challenge, solution, hard/soft benefits, testimonial, LinkedIn post, ROI statement, sales deck bullets, and cold outreach message. Must include at least 3 hard metrics and frame everything in B2B operational language aligned with SARVAX positioning.",
+      "files": [],
+      "expectations": [
+        "The skill loaded references/sarvax_intelligence.md via read_resource()",
+        "The case study headline is outcome-focused and ROI-specific",
+        "At least 3 concrete metrics are included in the Results section",
+        "The SARVAX HR Agent is referenced by name and its functions described accurately",
+        "A Before/After transformation section is present",
+        "A testimonial is generated in COO/Ops Director voice",
+        "All 4 sales assets are produced: LinkedIn post, ROI statement, sales deck bullets, cold outreach",
+        "No B2C framing or hype words are used",
+        "KARAX is not mentioned"
+      ],
+      "oneChat_requirements": {
+        "required_agent": "task_agent",
+        "required_toolkits": [],
+        "required_resources": ["references/sarvax_intelligence.md"]
+      }
+    },
+    {
+      "id": 2,
+      "prompt": "A Dubai-based SaaS company with 200 accounts deployed the SARVAX Customer Success Agent. Before, they had 2 CSMs manually tracking renewals in spreadsheets and missing churn signals. Turn this into a case study and sales content.",
+      "expected_output": "Full case study aligned with SARVAX CS Agent positioning. Must include measurable outcomes (churn reduction, response time improvement, hours recovered), before/after framing, generated testimonial, and all 4 sales assets.",
+      "files": [],
+      "expectations": [
+        "The skill loaded references/sarvax_intelligence.md via read_resource()",
+        "Customer Success Agent is correctly described (onboarding, health scoring, renewal management)",
+        "Hard metrics include churn signal response time, hours recovered, or account coverage improvement",
+        "Before state describes manual spreadsheet tracking and missed renewal signals",
+        "After state describes autonomous health scoring and renewal alerts",
+        "Testimonial sounds like a CS Director or VP Customer Success",
+        "Cold outreach message is 80-120 words with a clear CTA",
+        "No personal productivity language - all framing is business/team level"
+      ],
+      "oneChat_requirements": {
+        "required_agent": "task_agent",
+        "required_toolkits": [],
+        "required_resources": ["references/sarvax_intelligence.md"]
+      }
+    },
+    {
+      "id": 3,
+      "prompt": "We closed a client - a UK fintech startup, 40 employees, using the SARVAX Finance Operations Agent. They had one finance person manually chasing 150+ invoices a month. Overdue payments were at 35%. Create investor-ready proof from this.",
+      "expected_output": "Case study optimised for investor/sales context. Must include payment recovery metrics, time savings, cost implications, and language suitable for a pitch deck. All 4 sales assets required. ROI statement must be investor-grade.",
+      "files": [],
+      "expectations": [
+        "The skill loaded references/sarvax_intelligence.md via read_resource()",
+        "Finance Operations Agent is correctly described and matched to the use case",
+        "Hard metrics include invoice processing speed, overdue payment rate reduction, hours recovered",
+        "The ROI statement is suitable for investor materials (specific, credible, concise)",
+        "Sales deck bullets start with action verbs and include metrics",
+        "Language is appropriate for a CFO or investor audience - no fluff",
+        "Estimated metrics are clearly labelled as estimated",
+        "Output checklist items are all satisfied"
+      ],
+      "oneChat_requirements": {
+        "required_agent": "task_agent",
+        "required_toolkits": [],
+        "required_resources": ["references/sarvax_intelligence.md"]
+      }
+    }
+  ]
+}
